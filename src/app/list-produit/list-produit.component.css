@@ -1,0 +1,20 @@
+.afficheProduit{
+    display: flex;
+    flex-direction: column;
+}
+
+.produit{
+    display: flex;
+    gap: 20px;
+}
+
+.productName{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productPrice{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}

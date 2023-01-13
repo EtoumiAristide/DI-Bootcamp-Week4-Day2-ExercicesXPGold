@@ -1,0 +1,16 @@
+<h1>
+    Products list
+</h1>
+<select name="selectInput" id="selectInput" #selectInput (change)="onSelectionChanged(selectInput)">
+    <option value="" selected>--Toutes les catégories--</option>
+    <option *ngFor="let categorie of categories" value="{{categorie}}">{{categorie}}
+    </option>
+</select><label for="categorie"> Selectionnez une categorie pour trier les produits</label>
+<div class="afficheProduit">
+    <div *ngFor="let product of produitList">
+        <div class="produit" *appCategoryFilter="getData(product.category)">
+            <span class="productName">{{product.name}}</span>&nbsp;
+            <span class="productPrice">{{product.price | currency}}</span>
+        </div>
+    </div>
+</div>

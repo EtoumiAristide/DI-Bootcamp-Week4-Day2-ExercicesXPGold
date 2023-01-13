@@ -1,0 +1,7 @@
+<h1>
+    To Do list 2
+</h1>
+<div>
+    <app-to-do-item-detail *ngFor="let item of ToDoItemsList; let i=index" [description]="item.description" [status]="item.statut" [indexItem]="i" [itemId]="item.id">
+    </app-to-do-item-detail>
+</div>
